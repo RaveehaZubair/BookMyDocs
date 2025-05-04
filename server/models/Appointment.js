@@ -1,22 +1,43 @@
-// models/Appointment.js
-
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 const appointmentSchema = new mongoose.Schema({
-  patient_name: { type: String, required: true },
-  patient_email: { type: String, required: true },
-  doctor_name: { type: String, required: true },
-  doctor_email: { type: String, required: true },
-  date: { type: Date, required: true },
-  time: { type: String, required: true },
-  reminderSent: {
-    type: Boolean,
-    default: false,
+  patientName: { 
+    type: String, 
+    required: true 
   },
-  attended: {
-    type: Boolean,
-    default: false
-  },  
+  patientEmail: { 
+    type: String, 
+    required: true,
+    match: [/\S+@\S+\.\S+/, 'Please enter a valid email address.'] // Email validation regex
+  },
+  doctorId: { 
+    type: mongoose.Schema.Types.ObjectId, 
+    ref: 'Doctor', // Reference to the Doctor model
+    required: true 
+  },
+  doctorName: { 
+    type: String, 
+    required: true 
+  },
+  date: { 
+    type: Date,  // Date type for easier comparison and formatting
+    required: true 
+  },
+  time: { 
+    type: String, 
+    required: true 
+  },
+  status: { 
+    type: String, 
+    default: "Booked", 
+    enum: ['Booked', 'Cancelled', 'Completed'] // Status of the appointment
+  },
+  paymentStatus: { 
+    type: String, 
+    default: 'Pending', // Default status for payment until confirmed
+    enum: ['Pending', 'Confirmed', 'Failed'] // Payment status options
+  }
 });
 
-module.exports = mongoose.model('Appointment', appointmentSchema);
+// Export the model
+export default mongoose.model("Appointment", appointmentSchema);
