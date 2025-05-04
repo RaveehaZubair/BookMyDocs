@@ -1,0 +1,115 @@
+/* src/pages/doctorsList.css */
+
+/* Container for doctor list page */
+.doctor-list-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Dark mode container */
+  body.dark-mode .doctor-list-container {
+    background-color: #2c2c2e;
+    color: #f0f0f0;
+  }
+  
+  /* Title styling */
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: inherit;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+  }
+  
+  body.dark-mode table {
+    background-color: #1e1e1e;
+  }
+  
+  th, td {
+    padding: 12px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    transition: border-color 0.3s ease;
+  }
+  
+  body.dark-mode th,
+  body.dark-mode td {
+    border-bottom: 1px solid #444;
+  }
+  
+  /* Table header */
+  th {
+    background-color: #f1f1f1;
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+  
+  body.dark-mode th {
+    background-color: #333;
+    color: #f0f0f0;
+  }
+  
+  /* Table body text */
+  td {
+    color: inherit;
+  }
+  
+  /* Pagination controls */
+  .pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .pagination-controls button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  body.dark-mode .pagination-controls button {
+    background-color: #3399ff;
+  }
+  
+  .pagination-controls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  body.dark-mode .pagination-controls button:disabled {
+    background-color: #666;
+  }
+  
+  .pagination-controls button:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+  
+  body.dark-mode .pagination-controls button:hover:not(:disabled) {
+    background-color: #1a6ed8;
+  }
+  
+  .pagination-controls span {
+    font-size: 1rem;
+    margin: 0 10px;
+  }
+  
