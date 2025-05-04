@@ -1,8 +1,10 @@
+const patientRoutes = require('./routes/patient');
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const adminRoutes = require('./routes/adminRoutes');
 const cors = require('cors');
+require('dotenv').config();
 
 dotenv.config();  // Load environment variables from .env file
 
@@ -32,5 +34,8 @@ mongoose.connect(mongoURI)
     });
   })
   .catch(err => {
-    console.error('❌ MongoDB connection error:', err.message);
+    console.error(' MongoDB connection error:', err.message);
   });
+
+  
+  

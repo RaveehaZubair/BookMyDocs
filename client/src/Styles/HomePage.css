@@ -1,0 +1,293 @@
+/* HomePage.css */
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f0fb; /* Light lilac background */
+    margin: 0;
+    padding: 0;
+    color: #4a148c; /* Deep purple text */
+}
+
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HERO SECTION */
+.hero-section {
+    background: linear-gradient(to right, #9c27b0cc, #ba68c8cc); /* Purple gradient background */
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+.site-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subheadline {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.search-container {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-container > div > div { /* Root div of DoctorSearch */
+    background-color: white;
+    padding: 1.2rem; /* Slightly increased padding */
+    border-radius: 10px; /* More subtle rounded corners for the container */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Subtle container shadow */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .search-container > div > div input[type="text"],
+  .search-container > div > div select {
+    padding: 0.8rem 1rem;
+    border: 1px solid #d1c4e9;
+    border-radius: 6px; /* Slightly less rounded for input/select */
+    font-size: 1rem;
+    flex-basis: auto;
+    max-width: none;
+    transition: border-color 0.2s ease; /* Smooth border transition on focus */
+  }
+  
+  .search-container > div > div input[type="text"]::placeholder {
+    color: #aaa; /* Less prominent placeholder text */
+    opacity: 1; /* Firefox */
+  }
+  
+  .search-container > div > div input[type="text"]::-webkit-input-placeholder { /* Chrome, Safari, Opera */
+    color: #aaa;
+  }
+  
+  .search-container > div > div input[type="text"]:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #aaa;
+  }
+  
+  .search-container > div > div input[type="text"]::-ms-input-placeholder { /* Microsoft Edge */
+    color: #aaa;
+  }
+  
+  .search-container > div > div input[type="text"]:focus,
+  .search-container > div > div select:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #9c27b0; /* Purple focus border */
+    box-shadow: 0 0 4px rgba(156, 39, 176, 0.3); /* Subtle focus shadow */
+  }
+  
+  .search-container > div > div select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23673ab7" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.7rem center; /* Adjust arrow position slightly */
+    background-size: 1rem; /* Slightly smaller arrow */
+    padding-right: 2.2rem; /* Adjust padding for smaller arrow */
+  }
+  
+  .search-container > div > div button {
+    padding: 0.9rem 1.75rem; /* Slightly larger button */
+    background-color: #7b1fa2;
+    color: white;
+    border: none;
+    border-radius: 8px; /* Slightly more rounded button */
+    font-size: 1.1rem; /* Slightly larger font */
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions */
+    flex-basis: auto;
+    max-width: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Subtle button shadow */
+  }
+  
+  .search-container > div > div button:hover {
+    background-color: #9c27b0; /* Brighter purple on hover */
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2); /* More pronounced hover shadow */
+  }
+  
+  .search-container button:active {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Shadow when active */
+    transform: translateY(1px); /* Subtle press effect */
+  }
+  
+  .search-container .error-message {
+    color: #d32f2f;
+    margin-top: 0.5rem;
+    text-align: center;
+    width: 100%;
+  }
+
+.search-container button:hover {
+    background-color: #4a148c;
+}
+
+.search-container .error-message {
+    color: #d32f2f;
+    margin-top: 0.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+
+/* DASHBOARD LINK */
+.dashboard-link {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.btn-dashboard {
+    padding: 1rem 2rem;
+    background-color: #ab47bc; /* Lovely violet button */
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.3s ease, transform 0.2s ease-in-out;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-dashboard:hover {
+    background-color: #7b1fa2;
+    transform: scale(1.05);
+}
+
+/* SEARCH RESULTS SECTION */
+.search-results-section {
+    padding: 3rem 2rem;
+    background-color: #ede7f6; /* Lightest purple background */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.search-results-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #7b1fa2; /* Violet heading */
+    font-size: 2rem;
+}
+
+.doctors-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+}
+
+.doctor-card {
+    background: #fff;
+    border: 1px solid #d1c4e9; /* Light purple border */
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.doctor-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #9c27b0; /* Purple doctor name */
+}
+
+.doctor-info .specialization {
+    color: #673ab7; /* Deeper purple specialization */
+    margin-bottom: 0.3rem;
+}
+
+.doctor-info .availability {
+    color: #673ab7;
+}
+
+.doctor-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: opacity 0.2s ease-in-out;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #ab47bc; /* Violet primary button */
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #f3e5f5; /* Lightest purple secondary button */
+    color: #673ab7;
+    border: 1px solid #d1c4e9;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    opacity: 0.9;
+}
+
+.no-results, .error-message {
+    text-align: center;
+    color: #d32f2f;
+    margin: 2rem;
+    font-size: 1.1rem;
+}
+
+/* SITE FOOTER */
+.site-footer {
+    background-color: #673ab7; /* Purple footer */
+    color: #f3e5f5; /* Lightest purple text for contrast */
+    text-align: center;
+    padding: 2.5rem 1rem;
+    margin-top: auto;
+}
+
+.footer-top {
+    margin-bottom: 1.5rem;
+}
+
+.footer-top p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-links a {
+    color: #f3e5f5;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ab47bc; /* Violet hover color */
+}
+
+.site-footer p:last-child {
+    font-size: 0.9rem;
+    color: #e1bee7; /* Even lighter purple */
+    margin-top: 1rem;
+}
